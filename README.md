@@ -2,8 +2,10 @@
 
 A simple, fast, and lightweight Rust-based file explorer. FileX is designed for speed and simplicity, providing a seamless and efficient experience for navigating and managing your files.
 
-## Features
+**Note:** This project is still in development. Contributions are welcome!
 
+## Features
+- **Navigation:** For now, all that has been implemented (other than the UI) is navigation.
 - **Lightning Fast:** Built with Rust for optimal performance.
 - **User-Friendly:** Simple and intuitive interface using vanilla JavaScript, HTML, and CSS.
 - **Cross-Platform:** Runs on all major operating systems thanks to Tauri.
@@ -52,7 +54,6 @@ A simple, fast, and lightweight Rust-based file explorer. FileX is designed for 
    npm run tauri build
    ```
 
-**Note:** This project is still in development. Contributions are welcome!
 
 ## Contributing
 
