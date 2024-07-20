@@ -5,8 +5,8 @@
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "filex",
-    "version": "0.0.0"
+    "productName": "FileX",
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
@@ -18,7 +18,7 @@
     },
     "windows": [
       {
-        "title": "filex",
+        "title": "Explorer",
         "width": 800,
         "height": 600
       }
