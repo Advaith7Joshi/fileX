@@ -28,13 +28,11 @@
   justify-content: center;
 }
 
-ul
-{
+ul {
   list-style: none;
 }
 
-li:hover
-{
+li:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
   color: #24c8db;
@@ -46,8 +44,7 @@ h1 {
   font-weight: 500;
 }
 
-#dir-msg
-{
+#dir-msg {
   text-align: left;
   cursor: pointer;
 }
