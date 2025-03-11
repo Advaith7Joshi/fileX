@@ -1,4 +1,7 @@
 # FileX
+[![Versions](https://img.shields.io/github/v/release/Advaith7Joshi/fileX?label=Last%20version&style=for-the-badge)](https://github.com/Advaith7Joshi/fileX/releases)
+![Still maintained](https://img.shields.io/maintenance/yes/2025?style=for-the-badge)
+![In Development](https://img.shields.io/badge/Status-In%20Development-yellow.svg?style=for-the-badge)
 
 A simple, fast, and lightweight Rust-based file explorer. FileX is designed for speed and simplicity, providing a seamless and efficient experience for navigating and managing your files.
 
@@ -8,7 +11,7 @@ A simple, fast, and lightweight Rust-based file explorer. FileX is designed for 
 - **Navigation:** For now, all that has been implemented (other than the UI) is navigation.
 - **Lightning Fast:** Built with Rust for optimal performance.
 - **User-Friendly:** Simple and intuitive interface using vanilla JavaScript, HTML, and CSS.
-- **Cross-Platform:** Runs on all major operating systems thanks to Tauri.
+- **Cross-Platform:** Runs on all major operating systems thanks to Tauri (v1).
 
 ## Technologies Used
 
@@ -38,17 +41,17 @@ A simple, fast, and lightweight Rust-based file explorer. FileX is designed for 
    npm install
    ```
 
-3. **Install Rust dependencies:**
+4. **Install Rust dependencies:**
 
    Ensure you have Rust installed. If not, install it from [rust-lang.org](https://rust-lang.org/).
 
-4. **Run the development server:**
+5. **Run the development server:**
 
    ```sh
    npm run tauri dev
    ```
 
-5. **Build the project:**
+6. **Build the project:**
 
    ```sh
    npm run tauri build
