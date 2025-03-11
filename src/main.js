@@ -13,29 +13,25 @@ async function fetchdir() {
 
     const dirPath = directoryInputEl.value;
     console.log("Fetching directory:", dirPath);
-    currentDir = normalizePath(dirPath); // Update the current directory here
+    currentDir = normalizePath(dirPath);
     console.log(currentDir);
     const dirContents = await invoke("fetchdir", { dir: dirPath });
     console.log("Directory contents:", dirContents);
 
-    // Convert directory contents to list items
     const listItems = [
-      `<li id="back" style="font-weight: bold;">..</li>`, // ".." to go back
+      `<li id="back" style="font-weight: bold;">..</li>`,
       ...dirContents.split("\n").map((item) => `<li id="folder">${item}</li>`),
     ].join("");
 
-    // Display as a list
     directoryMsgEl.innerHTML = `<ul>${listItems}</ul>`;
 
-    // Add event listeners to the list items
     const listElements = directoryMsgEl.querySelectorAll("#folder");
     listElements.forEach((li) => {
       li.addEventListener("click", () => {
-        openfolder(li.textContent.trim()); // Call openfolder() with the clicked directory
+        openfolder(li.textContent.trim());
       });
     });
 
-    // Add event listeners to the back button
     const goBackButton = directoryMsgEl.querySelector("#back");
     if (goBackButton) {
       goBackButton.addEventListener("click", () => {
@@ -50,8 +46,8 @@ async function fetchdir() {
 
 function openfolder(directory) {
   console.log("Opening directory:", directory);
-  directoryInputEl.value = normalizePath(directory); // Set the input field value to the clicked directory
-  fetchdir(); // Fetch the contents of the new directory
+  directoryInputEl.value = normalizePath(directory);
+  fetchdir();
 }
 
 function goback() {
@@ -65,11 +61,9 @@ function goback() {
     directoryInputEl.value = normalizePath(pathParts.join("/"));
     fetchdir();
   } 
-  // TODO: Show drives
 }
 
 function normalizePath(path) {
-  // Convert Windows-style backslashes to forward slashes
   path = path.replace(/\\/g, "/");
   if (/^[a-zA-Z]:[^/]/.test(path)) {
     path = path.replace(/^([a-zA-Z]):([^/])/, "$1:/$2");
